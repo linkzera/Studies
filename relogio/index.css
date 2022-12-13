@@ -1,0 +1,34 @@
+@font-face {
+  font-family: p2p;
+  src: url("./assets/PressStart2P.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  font-size: 120px;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: p2p;
+  background: url("./assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+span {
+  color: #fff;
+}
+.hour,
+.min,
+.sec {
+  background: black;
+  padding: 50px;
+  border-radius: 10px;
+  border: 10px solid gold;
+  text-shadow: 1px 1px 5px gold;
+}
