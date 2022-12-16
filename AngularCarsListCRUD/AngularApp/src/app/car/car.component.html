@@ -1,0 +1,94 @@
+<div class="row">
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content white-text">
+          <div class="row">
+            <div class="col s5">
+              <form #carForm="ngForm" (ngSubmit)="onSubmit(carForm)">
+                <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="carService.selectedCar._id">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" name="placa" #name="ngModel" [(ngModel)]="carService.selectedCar.placa" placeholder="Insira a placa do veículo" required>
+                    <label>Placa :
+                      <label class="red-text">*</label>
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" name="chassi" #name="ngModel" [(ngModel)]="carService.selectedCar.chassi" placeholder="Insira o Chassi do veículo">
+                    <label>Chassi :</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" name="renavam" #name="ngModel" [(ngModel)]="carService.selectedCar.renavam" placeholder="Insira o Renavam do veículo">
+                    <label>Renavam :</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" name="modelo" #name="ngModel" [(ngModel)]="carService.selectedCar.modelo" placeholder="Insira o modelo do veículo">
+                    <label>Modelo :</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" name="marca" #name="ngModel" [(ngModel)]="carService.selectedCar.marca" placeholder="Insira a marca do veículo">
+                    <label>Marca :</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="number" name="ano" #name="ngModel" [(ngModel)]="carService.selectedCar.ano" placeholder="Insira o ano do veículo" max="2022">
+                    <label>Ano :</label>
+                  </div>
+                </div>
+
+
+                <div class="row">
+                  <div class="input-field col s12">
+                    <button class="btn btn-custom right" type="button" (click)="resetForm(carForm)">Reset</button>
+                    <button class="btn btn-custom right" type="submit" [disabled]="!carForm.valid" >Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="col s7">
+                <table class="responsive-table highlight">
+                    <thead>
+                      <tr>
+                        <th>Placa</th>
+                        <th>Chassi</th>
+                        <th>Renavam</th>
+                        <th>Modelo</th>
+                        <th>Marca</th>
+                        <th>Ano</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tr *ngFor="let emp of carService.cars">
+                      <td>{{emp.placa}}</td>
+                      <td>{{emp.chassi}}</td>
+                      <td>{{emp.renavam}}</td>
+                      <td>{{emp.modelo}}</td>
+                      <td>{{emp.marca}}</td>
+                      <td>{{emp.ano}}</td>
+                      <td></td>
+                      <td>
+                          <a class="action-btn" (click)="onEdit(emp)">
+                            <i class="material-icons">edit</i>
+                          </a>
+                          <a class="action-btn" (click)="onDelete(emp._id,carForm)">
+                            <i class="material-icons">delete</i>
+                          </a>
+                        </td>
+                    </tr>
+                  </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>

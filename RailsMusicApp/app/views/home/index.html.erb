@@ -1,0 +1,6 @@
+<select class="form-select" aria-label="Default select example">
+<% @artists_summary.general.each do |artist| %>
+    
+        <option value="1"><%= artist[0]['name'] %></option>
+         <% end %>
+</select>

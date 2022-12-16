@@ -1,0 +1,23 @@
+[{
+  "_id": {
+    "$oid": "616f31a5674a80fc4909d8ac"
+  },
+  "placa": "teste",
+  "chassi": "teste",
+  "renavam": "teste",
+  "modelo": "teste",
+  "marca": "teste",
+  "ano": 2021,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "616f332e674a80fc4909d8b3"
+  },
+  "placa": "5454516",
+  "chassi": "3216516516156",
+  "renavam": "651656516516",
+  "modelo": "Uno",
+  "marca": "Fiat",
+  "ano": 2021,
+  "__v": 0
+}]

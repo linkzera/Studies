@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --red: #8e2424;
+  --darkgray: #3a404e;
+  --gray: #667085;
+  --gray900: #101828;
+  --gray50: #d0d5dd;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 7rem;
+  align-items: center;
+  font-weight: 500;
+}
+
+.navbar__links {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.navbar__links > a {
+  text-decoration: none;
+  text-transform: none;
+  color: var(--gray);
+}
+
+.navbar__buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.navbar__buttons__enter {
+  background-color: var(--white);
+  border: none;
+  color: var(--gray);
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.navbar__buttons__register {
+  background-color: var(--red);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: var(--white);
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.aboutUs{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:2rem;
+  gap:2rem;
+  font-weight: 600;
+  margin-top: 5rem;
+}
+
+.aboutUs__subtitle{
+  font-size:16px;
+  color: var(--red);
+}
+
+.aboutUs__title{
+  font-size:48px;
+  color: var(--gray900);
+}
+.aboutUs__paragraph{
+  font-weight: 400;
+  font-size:20px;
+  color: var(--gray);
+  max-width: 70%;
+}
+
+.infos{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  
+justify-content: space-evenly;
+margin-top: 5rem;
+
+}
+
+.infos>div>h2{
+  font-size:48px;
+  color: var(--red);
+  font-weight: 600;
+}
+
+.infos>div>span{
+  font-size:16px;
+  color: var(--gray900);
+  font-weight: 500;
+}
+
+
+.infos>div>p{
+  font-size:14px;
+  color: var(--gray);
+  font-weight: 400;
+}
+
+.infos__projects,
+.infos__collaborators,
+.infos__downloads,
+.infos__review{
+  max-width: 10%;
+  
+}
